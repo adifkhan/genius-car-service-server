@@ -32,7 +32,7 @@ const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology:
 
 async function run() {
     try {
-        await client.connect();
+        client.connect();
         const serviceCollection = client.db('geniusCar').collection('services');
         const orderCollection = client.db('geniusCar').collection('order');
 
